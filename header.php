@@ -26,10 +26,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
+
 	<div id="wrapper-navbar">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+				<div class="alert alert-light" role="alert">
+				Check the status of your Stimulus! Visit the IRS's website: Get My Payment
+				</div>
+				<form class="form-inline my-2 my-lg-0">
+      			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    			</form>
+			</div>
+
+		</nav>
 		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
