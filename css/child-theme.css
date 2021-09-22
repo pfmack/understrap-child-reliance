@@ -14617,9 +14617,8 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /****** Homepage Hero Area *********/
-.hero {
+body.page-homepage .hero {
   background-size: cover;
-  height: 100vh;
 }
 
 .has-blue-color,
