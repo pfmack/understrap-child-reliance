@@ -14,7 +14,7 @@ body.home {
         background-position: left;
         background-size: 499px;
         background-repeat: no-repeat;
-        height: 50vh;
+        height:100%;
     }
 
     .left-image {
@@ -30,10 +30,6 @@ body.home {
         color: $white;
     }
 
-    .featured-image > .container-fluid{
-        height: $spacer * 16; 
-    }
-
     .container-fluid {
         width: $spacer * 26;
     }
@@ -43,4 +39,8 @@ body.home {
         padding-top: 5%;
     }
 
+    #featured-content{
+        color: $black;
+        padding: 10%;
+    }
 }

@@ -62,7 +62,7 @@ if ( is_front_page() ) {
 		<?php //check current row laywout ?>
 		<?php if( get_row_layout() == 'featured-content' ): ?>
 
-			<section>
+			<section id=#featured-content>
 				<div class="featured-image" style="background-image:url(<?php the_sub_field('icon-image')?>)">
 					<!--Text overlayed on Hero Image -->
 						<div class="container">
