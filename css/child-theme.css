@@ -14616,6 +14616,12 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+/****** Homepage Hero Area *********/
+.hero {
+  background-size: cover;
+  height: 100vh;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #007bff;

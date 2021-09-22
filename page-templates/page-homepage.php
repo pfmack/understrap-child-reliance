@@ -39,7 +39,7 @@ if ( is_front_page() ) {
 			
 			</section>
 
-<?php 
+	<?php 
 			endif;
 
 		endwhile;
