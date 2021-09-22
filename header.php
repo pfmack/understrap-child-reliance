@@ -47,7 +47,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
+				
 			</h2>
+
 
 		<?php if ( 'container' === $container ) : ?>
 			<div class="container">
@@ -92,10 +94,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
+				
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
-
+	
 	</div><!-- #wrapper-navbar end -->
