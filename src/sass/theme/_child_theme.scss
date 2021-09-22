@@ -1,7 +1,16 @@
 /****** Homepage Hero Area *********/
 
+body.home {
     .hero {
+    background:url('http://localhost:10033/wp-content/uploads/2021/09/homepage-hero.png');
     background-size: cover;
     height: 100vh;
-    }
+    margin-top: $spacer  - 8;
+    max-width: 100%;
+    position: center; 
 
+    }
+    .jumbotron-fluid {
+        margin-top: $space * 10;
+    }
+}
