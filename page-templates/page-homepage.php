@@ -33,10 +33,15 @@ if ( is_front_page() ) {
 			if (get_row_layout() == 'hero'): ?> 
 			
 			<section>
-				<div class="hero" style="background-image:url(<?php the_sub_field('hero_image') ?>)">
-				
+				<div class="hero" <?php the_sub_field('hero_image') ?> >
+					<div class="jumbotron-fluid">
+						<div class="container-fluid">
+						<?php the_sub_field('hero_text') ?> >
+						</div>
+
+					</div>
 				</div>
-			
+
 			</section>
 
 	<?php 
