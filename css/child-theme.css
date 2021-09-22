@@ -14617,8 +14617,39 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /****** Homepage Hero Area *********/
-body.page-homepage .hero {
+body.home .hero {
   background-size: cover;
+  height: 100vh;
+  margin-top: -7rem;
+  max-width: 100%;
+  position: center;
+}
+body.home .featured-image {
+  background-position: left;
+  background-size: 499px;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+body.home .left-image {
+  max-width: 50%;
+  position: center;
+}
+body.home .jumbotron-fluid {
+  padding-top: 16rem;
+  padding-right: 25rem;
+}
+body.home .jumbotron-fluid p {
+  color: #fff;
+}
+body.home .featured-image > .container-fluid, body.home .featured-image > .container-sm, body.home .featured-image > .container-md, body.home .featured-image > .container-lg, body.home .featured-image > .container-xl {
+  height: 16rem;
+}
+body.home .container-fluid, body.home .container-sm, body.home .container-md, body.home .container-lg, body.home .container-xl {
+  width: 26rem;
+}
+body.home .featured-text {
+  color: black;
+  padding-top: 5%;
 }
 
 .has-blue-color,

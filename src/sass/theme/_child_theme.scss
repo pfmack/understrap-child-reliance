@@ -1,8 +1,7 @@
 /****** Homepage Hero Area *********/
 
 body.home {
-    .hero {
-    background:url('http://localhost:10033/wp-content/uploads/2021/09/homepage-hero.png');
+    .hero{
     background-size: cover;
     height: 100vh;
     margin-top: $spacer  - 8;
@@ -10,7 +9,38 @@ body.home {
     position: center; 
 
     }
-    .jumbotron-fluid {
-        margin-top: $space * 10;
+
+    .featured-image{
+        background-position: left;
+        background-size: 499px;
+        background-repeat: no-repeat;
+        height: 50vh;
     }
+
+    .left-image {
+        max-width: 50%;
+        position: center;
+    }
+    .jumbotron-fluid {
+        padding-top: $spacer * 16;
+        padding-right: $spacer * 25;
+    }
+
+    .jumbotron-fluid p {
+        color: $white;
+    }
+
+    .featured-image > .container-fluid{
+        height: $spacer * 16; 
+    }
+
+    .container-fluid {
+        width: $spacer * 26;
+    }
+
+    .featured-text {
+        color: black;
+        padding-top: 5%;
+    }
+
 }

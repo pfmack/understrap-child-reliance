@@ -20,43 +20,124 @@ if ( is_front_page() ) {
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-	<?php 
+<?php //check if the flexible content fields has rows of data ?>
 
-	// check if the flexible content fields have rows of data
+<?php if (have_rows( 'flexible_content' ) ): ?>
 
-	if ( have_rows( 'flexible_content' ) ): 
+	<?php //loop through the rows of data ?>
+	<?php while ( have_rows( 'flexible_content') ) : the_row(); ?>
 
-		// loop through the rows of data
-		while (have_rows( 'flexible_content') ) : the_row();
+		<?php //check current row laywout ?>
+		<?php if( get_row_layout() == 'hero' ): ?>
 
-			// check current row layout
-			if (get_row_layout() == 'hero'): ?> 
-			
 			<section>
-				<div class="hero" <?php the_sub_field('hero_image') ?> >
+				<div class="hero" style="background-image:url(<?php the_sub_field('hero_image')?>)">
+					<!--Text overlayed on Hero Image -->
 					<div class="jumbotron-fluid">
 						<div class="container-fluid">
-						<?php the_sub_field('hero_text') ?> >
-						</div>
+						<?php the_sub_field('hero_text') ?>
+							<!--CTA button overlayed on Hero Image -->
+							<div class="container-fluid">
+					
+								<?php
+									$selected = get_sub_field( 'display_cta_button');
+					
+									//if cta checkbox is checked the button will appear
+									if( in_array( true , [$selected]) ) {
+									?>
+									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
 
+									<?php the_sub_field('hero_button_text'); ?></a>
+									<?php
+									}
+									else { ?>
+									<!-- cta checkbox is not checked so no button appears ---> 
+									<?php } ?>
+						</div>
 					</div>
 				</div>
-
 			</section>
+		<?php endif; ?>
 
-	<?php 
-			endif;
+		<?php //check current row laywout ?>
+		<?php if( get_row_layout() == 'featured-content' ): ?>
 
-		endwhile;
+			<section>
+				<div class="featured-image" style="background-image:url(<?php the_sub_field('icon-image')?>)">
+					<!--Text overlayed on Hero Image -->
+						<div class="container">
+							<div class="featured-text">
+						<?php the_sub_field('featured-text') ?>
+							</div>
+							<!--CTA button overlayed on Hero Image -->
+							<div class="container-fluid">
+					
+								<?php
+									$selected = get_sub_field( 'display_cta_button');
+					
+									//if cta checkbox is checked the button will appear
+									if( in_array( true , [$selected]) ) {
+									?>
+									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
 
-	else:
+									<?php the_sub_field('hero_button_text'); ?></a>
+									<?php
+									}
+									else { ?>
+									<!-- cta checkbox is not checked so no button appears ---> 
+									<?php } ?>
+						</div>
+				</div>
+			</section>
+		<?php endif; ?>
+		<?php //check current row laywout ?>
+		<?php if( get_row_layout() == 'first' ): ?>
 
-		// no flexible content fields found
-	endif;
+			<section>
+			
+				<div class="row">
+					<div class="col-6">
+					<img src="<?php the_sub_field('left_image'); ?>" />
+					</div>
+					<!--Text on right-->
+					<div class="col-6">
+						<div class="right-text"><?php the_sub_field('right_text') ?>
+						</div>
+					</div>
+							<!--CTA button overlayed on Hero Image -->
+							<div class="container-fluid">
+							
+								<?php
+									$selected = get_sub_field( 'display_cta_button');
+					
+									//if cta checkbox is checked the button will appear
+									if( in_array( true , [$selected]) ) {
+									?>
+									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
 
-?>
+									<?php the_sub_field('hero_button_text'); ?></a>
+									<?php
+									}
+									else { ?>
+									<!-- cta checkbox is not checked so no button appears ---> 
+									<?php } ?>
+						</div>
+					</div>
+				</div>
+			
+			</section>
+		<?php endif; ?>
 	
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+
+
+		<?php endwhile; ?>
+	<?php else : ?>
+	<?php endif; ?>
+	
+	
+
+
+	<!--<div class="//<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 
@@ -64,25 +145,25 @@ if ( is_front_page() ) {
 
 				<main class="site-main" id="main" role="main">
 
-					<?php
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
+					//<?php
+					//while ( have_posts() ) {
+						//the_post();
+						//get_template_part( 'loop-templates/content', 'page' );
 
 						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}
-					?>
+						//if ( comments_open() || get_comments_number() ) {
+							//comments_template();
+						//}
+					//}
+					//?>-->
 
-				</main><!-- #main -->
+				<!--/main> #main -->
 
-			</div><!-- #primary -->
+			<!-- </div>#primary -->
 
-		</div><!-- .row end -->
+		<!--</div> .row end -->
 
-	</div><!-- #content -->
+	<!--</div> #content -->
 
 </div><!-- #full-width-page-wrapper -->
 
