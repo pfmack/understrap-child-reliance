@@ -62,10 +62,10 @@ if ( is_front_page() ) {
 		<?php //check current row layout ?>
 		<?php if( get_row_layout() == 'featured-content' ): ?>
 
-			<section id=#featured-content>
+			<section id="featured-content">
 				<div class="featured-image" style="background-image:url(<?php the_sub_field('icon-image')?>)">
 					<!--Text overlayed on background Image -->
-						<div class="container">
+						<div class="featuerd-content container">
 							<div class="featured-text">
 						<?php the_sub_field('featured-text') ?>
 							</div>
@@ -76,17 +76,14 @@ if ( is_front_page() ) {
 		<?php if( get_row_layout() == 'first-section' ): ?>
 
 			<section>
-			
 				<div class="row">
-					<div class="col-md left-image">
+					<div class="col-md-7 left-image">
 					<img src="<?php the_sub_field('left_image'); ?>" />
 					</div>
 					<!--Text on right-->
 					<div class="col-md rightside-text"><?php the_sub_field('right_text') ?>
 					</div>
 					</div>
-				</div>
-			
 			</section>
 		<?php endif; ?>
 
@@ -99,7 +96,7 @@ if ( is_front_page() ) {
 					<div class="col-md second-leftside-text"><?php the_sub_field('second_leftside_text') ?>
 					</div>
 	
-					<div class="col-md second-rightside-image">
+					<div class="col-md-7 second-rightside-image">
 					<img src="<?php the_sub_field('second_rightside_image'); ?>" />
 						</div>
 				</div>
@@ -113,7 +110,7 @@ if ( is_front_page() ) {
 		<?php if( get_row_layout() == 'third-section' ): ?>
 			<section>
 				<div class="row">
-					<div class="col-md third-leftside-image">
+					<div class="col-md-7 third-leftside-image">
 					<img src="<?php the_sub_field('third_leftside_image');?>" />
 					</div>
 					<!--Text on right-->
@@ -132,7 +129,7 @@ if ( is_front_page() ) {
 					<div class="col-md fourth-leftside-text"><?php the_sub_field('fourth_leftside_text') ?>
 					</div>
 	
-					<div class="col-md fourth-rightside-image">
+					<div class="col-md-7 fourth-rightside-image">
 					<img src="<?php the_sub_field('fourth_rightside_image'); ?>" />
 						</div>
 					</div>
@@ -146,7 +143,7 @@ if ( is_front_page() ) {
 		<?php if( get_row_layout() == 'fifth-section' ): ?>
 			<section>
 				<div class="row">
-					<div class="col-md fifth-leftside-image">
+					<div class="col-md-7 fifth-leftside-image">
 					<img src="<?php the_sub_field('fifth_leftside_image');?>" />
 					</div>
 					<!--Text on right-->
