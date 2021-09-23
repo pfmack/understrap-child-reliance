@@ -91,17 +91,16 @@ if ( is_front_page() ) {
 			</section>
 		<?php endif; ?>
 		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
+		<?php if( get_row_layout() == 'first-section' ): ?>
 
 			<section>
-			
 				<div class="row">
 					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
+					<img src="<?php the_sub_field('leftside_image'); ?>" />
 					</div>
 					<!--Text on right-->
 					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
+						<div class="right-text"><?php the_sub_field('rightside_text') ?>
 						</div>
 					</div>
 							<!--CTA button overlayed on Hero Image -->
@@ -127,166 +126,19 @@ if ( is_front_page() ) {
 			
 			</section>
 		<?php endif; ?>
+
 		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
+		<?php if( get_row_layout() == 'second-section' ): ?>
 
 			<section>
 			
 				<div class="row">
 					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
+					<div class="left-text"><?php the_sub_field('leftside_text') ?>
 					</div>
 					<!--Text on right-->
 					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
-						</div>
-					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
-					</div>
-				</div>
-			
-			</section>
-		<?php endif; ?>
-		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
-
-			<section>
-			
-				<div class="row">
-					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
-					</div>
-					<!--Text on right-->
-					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
-						</div>
-					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
-					</div>
-				</div>
-			
-			</section>
-		<?php endif; ?>
-		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
-
-			<section>
-			
-				<div class="row">
-					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
-					</div>
-					<!--Text on right-->
-					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
-						</div>
-					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
-					</div>
-				</div>
-			
-			</section>
-		<?php endif; ?>
-		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
-
-			<section>
-			
-				<div class="row">
-					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
-					</div>
-					<!--Text on right-->
-					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
-						</div>
-					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
-					</div>
-				</div>
-			
-			</section>
-		<?php endif; ?>
-		<?php //check current row laywout ?>
-		<?php if( get_row_layout() == 'first' ): ?>
-
-			<section>
-			
-				<div class="row">
-					<div class="col-6">
-					<img src="<?php the_sub_field('left_image'); ?>" />
-					</div>
-					<!--Text on right-->
-					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('right_text') ?>
+					<img src="<?php the_sub_field('rightside_image'); ?>" />
 						</div>
 					</div>
 							<!--CTA button overlayed on Hero Image -->
