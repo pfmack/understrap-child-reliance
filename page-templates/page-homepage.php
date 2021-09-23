@@ -65,7 +65,7 @@ if ( is_front_page() ) {
 			<section id="featured-content">
 				<div class="featured-image" style="background-image:url(<?php the_sub_field('icon-image')?>)">
 					<!--Text overlayed on background Image -->
-						<div class="featuerd-content container">
+						<div class="featured-content container">
 							<div class="featured-text">
 						<?php the_sub_field('featured-text') ?>
 							</div>
