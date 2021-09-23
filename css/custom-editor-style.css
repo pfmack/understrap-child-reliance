@@ -117,12 +117,12 @@ sup {
 }
 
 a {
-  color: #5533ff;
+  color: #08529B;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #2600e6;
+  color: #042c52;
   text-decoration: underline;
 }
 
@@ -316,7 +316,7 @@ template {
 }
 
 :root {
-  --blue: #007bff;
+  --blue: #08529B;
   --indigo: #6610f2;
   --purple: #5533ff;
   --pink: #e83e8c;
@@ -329,7 +329,7 @@ template {
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #5533ff;
+  --primary: #08529B;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -404,21 +404,21 @@ template {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #cfc6ff;
+  background-color: #bacfe3;
 }
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #a795ff;
+  border-color: #7fa5cb;
 }
 
 .table-hover .table-primary:hover {
-  background-color: #baadff;
+  background-color: #a8c2dc;
 }
 .table-hover .table-primary:hover > td,
 .table-hover .table-primary:hover > th {
-  background-color: #baadff;
+  background-color: #a8c2dc;
 }
 
 .table-secondary,
@@ -691,8 +691,9 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
+  color: #08529B;
 }
 
 h1, .h1 {
@@ -805,12 +806,12 @@ mark,
 
 .has-blue-color,
 .has-blue-color:visited {
-  color: #007bff;
+  color: #08529B;
 }
 
 .has-blue-background-color {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #08529B;
+  border-color: #08529B;
 }
 
 .has-indigo-color,
@@ -935,12 +936,12 @@ mark,
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #5533ff;
+  color: #08529B;
 }
 
 .has-primary-background-color {
-  background-color: #5533ff;
-  border-color: #5533ff;
+  background-color: #08529B;
+  border-color: #08529B;
 }
 
 .has-secondary-color,
@@ -1132,7 +1133,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 
 .editor-post-title .editor-post-title__input {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=custom-editor-style.css.map */

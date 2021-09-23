@@ -1,6 +1,18 @@
 /****** Homepage Hero Area *********/
 
 body.home {
+
+    h2 , h3, h4 {
+        font-weight: $headings-font-weight;
+        color: $blue;
+    }
+
+    .container-fluid {
+        width: $spacer * 26;
+    }
+
+    /***** Hero Styles***/
+   
     .hero{
     background-size: cover;
     height: 100vh;
@@ -10,11 +22,6 @@ body.home {
 
     }
 
-    .featured-image{
-        background-size: 499px;
-        background-repeat: no-repeat;
-        height:100%;
-    }
 
     .jumbotron-fluid {
         padding-top: $spacer * 16;
@@ -25,8 +32,12 @@ body.home {
         color: $white;
     }
 
-    .container-fluid {
-        width: $spacer * 26;
+
+    /***** Featured Advanced Custom Field Content Section *****/
+    .featured-image{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:100%;
     }
 
     .featured-text {
@@ -42,9 +53,21 @@ body.home {
         color: $blue;
     }
 
-     h2 , h3, h4 {
-        font-weight: $headings-font-weight;
-        color: $blue;
-    }
+    /***** Advanced Custom Field Content and Image Sections *****/
 
+    h4, p {
+        padding: $spacer * 2;
+    }
+        
+
+    }
+    @include media-breakpoint-up(md) {
+        .featured-image{
+            background-size: 499px;
+            background-repeat: no-repeat;
+            height:100%;
+        }
+    }
 }
+
+
