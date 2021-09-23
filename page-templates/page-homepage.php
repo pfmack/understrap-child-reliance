@@ -27,7 +27,7 @@ if ( is_front_page() ) {
 	<?php //loop through the rows of data ?>
 	<?php while ( have_rows( 'flexible_content') ) : the_row(); ?>
 
-		<?php //check current row laywout ?>
+		<?php //check current row layout ?>
 		<?php if( get_row_layout() == 'hero' ): ?>
 
 			<section>
@@ -59,7 +59,7 @@ if ( is_front_page() ) {
 			</section>
 		<?php endif; ?>
 
-		<?php //check current row laywout ?>
+		<?php //check current row layout ?>
 		<?php if( get_row_layout() == 'featured-content' ): ?>
 
 			<section id=#featured-content>
@@ -69,139 +69,95 @@ if ( is_front_page() ) {
 							<div class="featured-text">
 						<?php the_sub_field('featured-text') ?>
 							</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-					
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
 				</div>
 			</section>
 		<?php endif; ?>
-		<?php //check current row laywout ?>
+		<?php //check current row layout ?>
 		<?php if( get_row_layout() == 'first-section' ): ?>
 
 			<section>
 				<div class="row">
 					<div class="col-6">
-					<img src="<?php the_sub_field('leftside_image'); ?>" />
+					<img src="<?php the_sub_field('left_image'); ?>" />
 					</div>
 					<!--Text on right-->
-					<div class="col-6">
-						<div class="right-text"><?php the_sub_field('rightside_text') ?>
+					<div class="col-6 rightside-text"><?php the_sub_field('right_text') ?>
 						</div>
 					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
 					</div>
 				</div>
 			
 			</section>
 		<?php endif; ?>
 
-		<?php //check current row laywout ?>
+		<?php //check current row layout ?>
 		<?php if( get_row_layout() == 'second-section' ): ?>
 
 			<section>
-			
 				<div class="row">
-					<div class="col-6">
-					<div class="left-text"><?php the_sub_field('leftside_text') ?>
+					<div class="col-6 leftside-text"><?php the_sub_field('second_leftside_text') ?>
 					</div>
-					<!--Text on right-->
-					<div class="col-6">
-					<img src="<?php the_sub_field('rightside_image'); ?>" />
+	
+					<div class="col-6 rightside-image">
+					<img src="<?php the_sub_field('second_rightside_image'); ?>" />
 						</div>
 					</div>
-							<!--CTA button overlayed on Hero Image -->
-							<div class="container-fluid">
-							
-								<?php
-									$selected = get_sub_field( 'display_cta_button');
-					
-									//if cta checkbox is checked the button will appear
-									if( in_array( true , [$selected]) ) {
-									?>
-									<a class="btn btn-outline-light btn-lg" href="<?php the_sub_field('hero_cta_button_url') ?>">
-
-									<?php the_sub_field('hero_button_text'); ?></a>
-									<?php
-									}
-									else { ?>
-									<!-- cta checkbox is not checked so no button appears ---> 
-									<?php } ?>
-						</div>
 					</div>
 				</div>
 			
 			</section>
 		<?php endif; ?>
 
+	<?php //check current row layout ?>
+		<?php if( get_row_layout() == 'third-section' ): ?>
+			<section>
+				<div class="row">
+					<div class="col-6 third-leftside-image">
+					<img src="<?php the_sub_field('third_leftside_image');?>" />
+					</div>
+					<!--Text on right-->
+					<div class="col-6 rightside-text"><?php the_sub_field('third_rightside_text') ?>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php endif; ?>
 
-		<?php endwhile; ?>
+		<?php //check current row layout ?>
+		<?php if( get_row_layout() == 'fourth-section' ): ?>
+
+			<section>
+				<div class="row">
+					<div class="col-6 leftside-text"><?php the_sub_field('fourth_leftside_text') ?>
+					</div>
+	
+					<div class="col-6 rightside-image">
+					<img src="<?php the_sub_field('fourth_rightside_image'); ?>" />
+						</div>
+					</div>
+					</div>
+				</div>
+			
+			</section>
+		<?php endif; ?>
+
+	<?php //check current row layout ?>
+		<?php if( get_row_layout() == 'fifth-section' ): ?>
+			<section>
+				<div class="row">
+					<div class="col-6 fifth-leftside-image">
+					<img src="<?php the_sub_field('fifth_leftside_image');?>" />
+					</div>
+					<!--Text on right-->
+					<div class="col-6 right-text"><?php the_sub_field('fifth_rightside_text') ?>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php endif; ?>
+	<?php endwhile; ?>
 	<?php else : ?>
 	<?php endif; ?>
-	
-	
-
-
-	<!--<div class="//<?php echo esc_attr( $container ); ?>" id="content">
-
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
-
-					//<?php
-					//while ( have_posts() ) {
-						//the_post();
-						//get_template_part( 'loop-templates/content', 'page' );
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						//if ( comments_open() || get_comments_number() ) {
-							//comments_template();
-						//}
-					//}
-					//?>-->
-
-				<!--/main> #main -->
-
-			<!-- </div>#primary -->
-
-		<!--</div> .row end -->
-
-	<!--</div> #content -->
-
-</div><!-- #full-width-page-wrapper -->
 
 <?php
 get_footer();

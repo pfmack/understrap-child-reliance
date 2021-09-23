@@ -16,10 +16,6 @@ body.home {
         height:100%;
     }
 
-    .left-image {
-        max-width: 50%;
-        position: center;
-    }
     .jumbotron-fluid {
         padding-top: $spacer * 16;
         padding-right: $spacer * 25;
@@ -34,15 +30,21 @@ body.home {
     }
 
     .featured-text {
-        color: black;
+        color: $blue;
         padding: 5%;
     }
 
     #featured-content{
-        color: $black;
         padding: 10%;
     }
-    picture.first-image img{
-        border-radius: 0px 75px 0px 0px;
+
+    #featured-content p {
+        color: $blue;
     }
+
+     h2 , h3, h4 {
+        font-weight: $headings-font-weight;
+        color: $blue;
+    }
+
 }

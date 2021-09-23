@@ -4,5 +4,8 @@
 
 
 $purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
-$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+$primary: $blue ; // Once we've changed the value, we'll also make it the primary brand color.
 $font-family-base: 'Lato', sans-serif;
+$blue: #08529B;
+$headings-font-weight: 700; 
+$headings-color:  $primary;
