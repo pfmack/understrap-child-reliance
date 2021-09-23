@@ -64,7 +64,7 @@ if ( is_front_page() ) {
 
 			<section id=#featured-content>
 				<div class="featured-image" style="background-image:url(<?php the_sub_field('icon-image')?>)">
-					<!--Text overlayed on Hero Image -->
+					<!--Text overlayed on background Image -->
 						<div class="container">
 							<div class="featured-text">
 						<?php the_sub_field('featured-text') ?>
@@ -76,13 +76,13 @@ if ( is_front_page() ) {
 		<?php if( get_row_layout() == 'first-section' ): ?>
 
 			<section>
+			
 				<div class="row">
 					<div class="col-md left-image">
 					<img src="<?php the_sub_field('left_image'); ?>" />
 					</div>
 					<!--Text on right-->
 					<div class="col-md rightside-text"><?php the_sub_field('right_text') ?>
-						</div>
 					</div>
 					</div>
 				</div>
@@ -94,6 +94,7 @@ if ( is_front_page() ) {
 		<?php if( get_row_layout() == 'second-section' ): ?>
 
 			<section>
+			
 				<div class="row flex-column-reverse flex-md-row">
 					<div class="col-md second-leftside-text"><?php the_sub_field('second_leftside_text') ?>
 					</div>
@@ -101,10 +102,10 @@ if ( is_front_page() ) {
 					<div class="col-md second-rightside-image">
 					<img src="<?php the_sub_field('second_rightside_image'); ?>" />
 						</div>
-					</div>
-					</div>
 				</div>
 			
+				
+							
 			</section>
 		<?php endif; ?>
 
